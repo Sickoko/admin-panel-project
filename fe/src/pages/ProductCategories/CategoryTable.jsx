@@ -18,6 +18,7 @@ export default function CategoriesTable() {
     const FETCHED_DATA = await fetch(URL);
     const FETCHED_JSON = await FETCHED_DATA.json();
     setCategories(FETCHED_JSON);
+    const parseJSONData = JSON.parse(FETCHED_JSON);
   }
 
   async function handleDelete(categoryId) {
